@@ -2,7 +2,7 @@
 
 ### 1.前缀匹配思想和可拓展哈希表的结合
 
-![image-20250209215841727](C:\Users\yybigfish\AppData\Roaming\Typora\typora-user-images\image-20250209215841727.png)
+![MERT 结构](images/MERTStructure.png)
 
 MERTNode的结构大致如上，prefixdirectory存放匹配的前缀，当key-value插入时，采用最大匹配原则进入对应的prefixdirectory，再根据该prefix后的第一个字节的后四位进入对应的segment，进入segment后通过key的最后一个字节的八位进入对应的bucket，进入bucket后存放(或进入下一层更匹配的节点中)
 
